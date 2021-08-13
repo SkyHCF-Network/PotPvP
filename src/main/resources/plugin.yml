@@ -1,0 +1,6 @@
+name: PotPvP
+version: 4.7.3
+author: Hylist Games, Atmosphere Games
+main: net.frozenorb.potpvp.PotPvPSI
+depend: [ qLib ]
+softdepend: [ Basic, AntiCheat ]
