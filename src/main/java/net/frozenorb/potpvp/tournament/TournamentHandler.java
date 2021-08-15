@@ -134,7 +134,7 @@ public class TournamentHandler implements Listener {
         }
 
         if (notInLobby != 0) {
-            sender.sendMessage(ChatColor.RED.toString() + notInLobby + "member" + (notInLobby == 1 ? "" : "s") + " of your team aren't in the lobby.");
+            sender.sendMessage(ChatColor.RED.toString() + notInLobby + " member" + (notInLobby == 1 ? "" : "s") + " of your team is not in the lobby.");
             return;
         }
 
