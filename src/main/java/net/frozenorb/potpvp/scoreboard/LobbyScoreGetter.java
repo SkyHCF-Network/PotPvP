@@ -105,7 +105,7 @@ final class LobbyScoreGetter implements BiConsumer<Player, LinkedList<String>> {
         }
 
         Tournament tournament = PotPvPSI.getInstance().getTournamentHandler().getTournament();
-        if (tournament != null) {
+        if (tournament != null && !PotPvPSI.getInstance().getQueueHandler().isQueuedUnranked(player.getUniqueId()) && !PotPvPSI.getInstance().getQueueHandler().isQueuedRanked(player.getUniqueId())) {
             scores.add("&5&7&m--------------------");
             scores.add("&b&lTournament");
 

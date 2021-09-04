@@ -67,6 +67,7 @@ public final class ManageEventsMenu extends Menu {
                     if (schematic.getEvent() != event) {
                         schematic.setArcherOnly(false);
                         schematic.setBuildUHCOnly(false);
+                        schematic.setSumoOnly(false);
                         schematic.setHCFOnly(false);
                         schematic.setSpleefOnly(false);
                         schematic.setSupportsRanked(false);

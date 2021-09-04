@@ -9,6 +9,7 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 
+import net.frozenorb.potpvp.match.listener.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -22,26 +23,6 @@ import net.frozenorb.potpvp.arena.Arena;
 import net.frozenorb.potpvp.arena.ArenaHandler;
 import net.frozenorb.potpvp.arena.ArenaSchematic;
 import net.frozenorb.potpvp.kittype.KitType;
-import net.frozenorb.potpvp.match.listener.GoldenHeadListener;
-import net.frozenorb.potpvp.match.listener.KitSelectionListener;
-import net.frozenorb.potpvp.match.listener.MatchBlockPickupListener;
-import net.frozenorb.potpvp.match.listener.MatchBuildListener;
-import net.frozenorb.potpvp.match.listener.MatchComboListener;
-import net.frozenorb.potpvp.match.listener.MatchCountdownListener;
-import net.frozenorb.potpvp.match.listener.MatchDeathMessageListener;
-import net.frozenorb.potpvp.match.listener.MatchDurationLimitListener;
-import net.frozenorb.potpvp.match.listener.MatchEnderPearlDamageListener;
-import net.frozenorb.potpvp.match.listener.MatchFreezeListener;
-import net.frozenorb.potpvp.match.listener.MatchGeneralListener;
-import net.frozenorb.potpvp.match.listener.MatchHardcoreHealingListener;
-import net.frozenorb.potpvp.match.listener.MatchHealthDisplayListener;
-import net.frozenorb.potpvp.match.listener.MatchPartySpectateListener;
-import net.frozenorb.potpvp.match.listener.MatchRodListener;
-import net.frozenorb.potpvp.match.listener.MatchSoupListener;
-import net.frozenorb.potpvp.match.listener.MatchStatsListener;
-import net.frozenorb.potpvp.match.listener.MatchWizardListener;
-import net.frozenorb.potpvp.match.listener.SpectatorItemListener;
-import net.frozenorb.potpvp.match.listener.SpectatorPreventionListener;
 import net.frozenorb.qlib.util.UUIDUtils;
 
 public final class MatchHandler {
@@ -64,7 +45,8 @@ public final class MatchHandler {
     public MatchHandler() {
         Bukkit.getPluginManager().registerEvents(new GoldenHeadListener(), PotPvPSI.getInstance());
         Bukkit.getPluginManager().registerEvents(new KitSelectionListener(), PotPvPSI.getInstance());
-        Bukkit.getPluginManager().registerEvents(new MatchBlockPickupListener(), PotPvPSI.getInstance());
+        Bukkit.getPluginManager().registerEvents(new onBlockDropItems(), PotPvPSI.getInstance());
+        Bukkit.getPluginManager().registerEvents(new onTouchWater(), PotPvPSI.getInstance());
         Bukkit.getPluginManager().registerEvents(new MatchBuildListener(), PotPvPSI.getInstance());
         Bukkit.getPluginManager().registerEvents(new MatchComboListener(), PotPvPSI.getInstance());
         Bukkit.getPluginManager().registerEvents(new MatchCountdownListener(), PotPvPSI.getInstance());

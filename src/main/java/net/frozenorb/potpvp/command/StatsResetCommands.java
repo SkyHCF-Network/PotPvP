@@ -22,7 +22,7 @@ import redis.clients.jedis.Jedis;
 public class StatsResetCommands {
     private static String REDIS_PREFIX = "PotPvP:statsResetToken:";
 
-    @Command(names = { "statsreset addtoken" }, permission = "op", async = true)
+    @Command(names = { "statsreset addtoken" }, permission = "statsreset.addtoken", async = true)
     public static void addToken(CommandSender sender, @Param(name = "player") String playerName, @Param(name = "amount") int amount) {
         UUID uuid = UUIDUtils.uuid(playerName);
 
